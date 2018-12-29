@@ -1,0 +1,27 @@
+{
+  "name": "next-dictionary",
+  "version": "0.0.1",
+  "description": "Dictionary for next",
+  "main": "dist/next-dictionary.js",
+  "authors": [
+    "afei"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "next"
+  ],
+  "homepage": "https://github.com/afeiship/next-dictionary",
+  "moduleType": [
+    "amd"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "src",
+    "build",
+    "gulpfile.js"
+  ]
+}
