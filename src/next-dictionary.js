@@ -3,6 +3,13 @@
   var nx = global.nx || require('next-js-core2');
 
   var NxDictionary = nx.declare('nx.Dictionary', {
+    properties: {
+      length: {
+        get: function() {
+          return this.keys().length;
+        }
+      }
+    },
     methods: {
       init: function() {
         this.items = {};
@@ -14,7 +21,14 @@
         this.items[inKey] = inValue;
       },
       get: function(inKey) {
-        return this.has(inKey) ? this.items[inKey] : null;
+        return this.has(inKey) ? this.items[inKey] : undefined;
+      },
+      delete: function(inKey) {
+        if (this.has(inKey)) {
+          delete this.items[inKey];
+          return true;
+        }
+        return false;
       },
       clear: function() {
         this.items = {};
@@ -33,9 +47,6 @@
         return this.keys().map(function(key) {
           return self.items[key];
         });
-      },
-      length: function() {
-        return this.keys().length;
       }
     }
   });
