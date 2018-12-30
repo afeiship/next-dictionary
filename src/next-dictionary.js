@@ -4,7 +4,7 @@
 
   var NxDictionary = nx.declare('nx.Dictionary', {
     properties: {
-      length: {
+      size: {
         get: function() {
           return this.keys().length;
         }

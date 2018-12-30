@@ -56,7 +56,7 @@ test('test: keys/values/size', () => {
   dic.set('k2', 'value2');
   expect(dic.keys()).toEqual(['k1', 'k2']);
   expect(dic.values()).toEqual(['value1', 'value2']);
-  expect(dic.length).toBe(2);
+  expect(dic.size).toBe(2);
 });
 
 test('test: global.delete ', () => {
