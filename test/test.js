@@ -34,11 +34,20 @@ test('test: delete an exist element', () => {
   expect(dic.get('k2')).toBeUndefined();
 });
 
-test('test: clear', () => {
+test('test: clear {}', () => {
   var dic = new NxDictionary();
   dic.set('k1', 'value1');
   dic.clear();
   expect(dic.gets()).toEqual({});
+});
+
+test('test: clear []', () => {
+  var dic = new NxDictionary();
+  dic.set('k1', 'value1');
+  dic.set('k2', 'value2');
+  expect(dic.keys()).toEqual(['k1', 'k2']);
+  dic.clear();
+  expect(dic.keys()).toEqual([]);
 });
 
 test('test: keys/values/size', () => {
